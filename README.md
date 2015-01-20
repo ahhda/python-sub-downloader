@@ -1,5 +1,7 @@
 # python-sub-downloader
 
+Download subtitles for movie(s) easily with this Python script
+
 How To Use:
 
 1. Download subtitle.py file to the folder containing movie(s)
