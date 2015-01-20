@@ -1,5 +1,8 @@
-#this hash function receives the name of the file and returns the hash code
-#SubDB requires this kind of hashing
+#-------------------------------------------------------------------------------
+# Name      : subtitle
+# Created By: Anuj Bansal
+#-------------------------------------------------------------------------------
+
 import sys, os, hashlib
 
 try:
@@ -8,6 +11,9 @@ try:
 except ImportError:
     import urllib2
     Ver=2
+
+#this hash function receives the name of the file and returns the hash code
+#SubDB requires this kind of hashing
 
 def get_hash(name):
     readsize = 64 * 1024
@@ -45,14 +51,10 @@ def download(filename):
         	req = urllib2.Request(url, '', agent)
         	response = urllib2.urlopen(req).read()
         srt=filename+'.srt'
-        
-    	writefile=open(srt,'wb')
+        writefile=open(srt,'wb')
     	writefile.write(response)
     except:
     	print "Not found for", filename
-    	
-
-
 
 dirc = os.path.dirname(os.path.abspath(__file__))
 
